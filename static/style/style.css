@@ -1,0 +1,30 @@
+strong {
+    font-size: xx-large;
+}
+
+.navbar img {
+    width: 4rem;
+}
+
+.radius-container {
+  border-radius: 10px;
+}
+
+.custom-rounded {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.custom-ratio-4x5 {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-ratio-4x5 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
