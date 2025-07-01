@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS reserves;
+
+CREATE DATABASE reserves;
+
+USE reserves;
+
+CREATE TABLE reserves (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    quantity INT UNSIGNED NOT NULL
+);
