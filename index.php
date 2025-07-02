@@ -1,6 +1,7 @@
 <?php
 require "database.php";
 
+session_destroy();
 $error = null;
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -34,14 +35,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         ":quantity" => $_POST["quantity"]
       ]);
 
-      $statement = $conn->prepare("SELECT * FROM reserves WHERE email = :email");
+      //User session
+      $statement = $conn->prepare("SELECT * FROM reserves WHERE email = :email LIMIT 1");
       $statement->execute([
         ":email" => $_POST["email"]
       ]);
-
       $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-      header("Location: confirmation.php?id=" . $user["id"]);
+      session_start();
+      $_SESSION["user"] = $user;
+
+      header("Location: confirmation.php");
     } 
   }
 }
