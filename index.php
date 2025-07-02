@@ -1,7 +1,10 @@
 <?php
 require "database.php";
 
-session_destroy();
+if(isset($_SESSION["user"])) {
+  session_destroy();
+}
+
 $error = null;
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
