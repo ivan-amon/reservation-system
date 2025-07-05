@@ -28,9 +28,3 @@ This project serves as an educational tool to strengthen backend development ski
 - Manual validation techniques
 - Managing user sessions securely
 - Building database interaction logic from scratch
-
-## Contributing
-Contributions are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-This project is licensed under the MIT License.
